@@ -66,6 +66,7 @@ if (articuloAComprar == 7){
   break;
 }
 
+
 flag = prompt('Quiere pedir otro artículo Y/N?');  
 console.log("flag", flag);
 } while (flag != 'N');
@@ -74,3 +75,26 @@ console.log("flag", flag);
 console.log("total", total);
 
 alert("Su total es " + total);
+ 
+let totalAPagar;
+let cuotas;
+
+cuotas = prompt(`Quiere pagar en cuotas?
+A. No, gracias
+  B. en 3 cuotas con el 20%
+  C. en 6 cuotas con el 40%
+   `);
+  switch (cuotas) {
+    case "A":
+        totalAPagar = total; 
+        break;
+    case "B":
+        totalAPagar =  " 3 cuotas de " + [(total * 20 /100) + total] /3;
+        break;
+        case "C":
+        totalAPagar =  " 6 cuotas de " + [(total * 40 / 100) + total] / 6;
+        break;
+  }
+
+  alert(" Su total a pagar es" + totalAPagar);
+
